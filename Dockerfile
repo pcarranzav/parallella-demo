@@ -6,7 +6,7 @@ RUN apt-get update \
         && apt-get autoremove -qqy 
 
 RUN mkdir -p /app && cd /app \
-	&& axel -n 10 http://ftp.parallella.org/esdk/esdk.2015.1_linux_armv7l-20150523.tar.gz && tar -xf esdk.2015.1_linux_armv7l-20150523.tar.gz && rm esdk.2015.1_linux_armv7l-20150523.tar.gz \
+	&& axel -n 10 http://ftp.parallella.org/esdk/beta/esdk.2015.1_linux_armv7l-20150523.tar.gz && tar -xf esdk.2015.1_linux_armv7l-20150523.tar.gz && rm esdk.2015.1_linux_armv7l-20150523.tar.gz \
 	&& wget https://github.com/adapteva/epiphany-examples/archive/2015.1.tar.gz && tar -xf 2015.1.tar.gz && rm 2015.1.tar.gz
 
 ENV EPIPHANY_HOME /app/esdk.2015.1
